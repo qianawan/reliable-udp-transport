@@ -59,6 +59,8 @@ The receiver treats an empty datagram delivered by FIN as end-of-file. Because t
 
 ## Source and contribution notes
 
-This project uses the GUDP starter files supplied in GUDP.tgz. The archive's GUDPSender, GUDPReceiver, and GUDPSocket were incomplete teaching skeletons. The user-supplied GUDPSocket.java and GUDPSender.java were used as implementation starting points; the duplicate 1-GUDPSender.java backup is intentionally omitted. The receiver implementation, packet-boundary validation, integration test, examples, and project packaging were completed with coding assistance. Review and understand the code before describing individual contributions on a CV.
+This project uses the GUDP starter files supplied in GUDP.tgz. Its sender, receiver, and socket files were incomplete teaching skeletons. The user-supplied GUDPSocket.java and GUDPSender.java were implementation starting points and were then substantially revised with coding assistance. The completed receiver, packet-boundary validation, integration test, file examples, and project packaging were also prepared with coding assistance. Review and understand the code before describing individual contributions on a CV.
+
+The duplicate 1-GUDPSender.java backup is omitted. Compared with that backup, GUDPSender.java includes a guard for a finished endpoint with an empty queue and stops an existing timer before restarting it; this project uses GUDPSender.java as its starting variant. The loopback test exercises a dropped DATA packet and a successful Go-Back-N retransmission, but it does not prove correctness for every network condition or protocol edge case.
 
 The original iCloud files were not modified.
